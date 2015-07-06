@@ -34,6 +34,8 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     return [[PECropViewController bundle] localizedStringForKey:key value:nil table:@"Localizable"];
 }
 
+bool square = false;
+
 #pragma mark -
 
 - (void)loadView
@@ -71,7 +73,12 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
 {
     [super viewDidAppear:animated];
     
-    CGFloat ratio = 9.0f / 16.0f;
+    CGFloat ratio = 1.0f;
+    
+    if (!square)
+    {
+        ratio = 9.0f / 16.0f;
+    }
     CGRect cropRect = self.cropView.cropRect;
     CGFloat width = CGRectGetWidth(cropRect);
     cropRect.size = CGSizeMake(width, width * ratio);
