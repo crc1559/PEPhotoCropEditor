@@ -34,6 +34,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     return [[PECropViewController bundle] localizedStringForKey:key value:nil table:@"Localizable"];
 }
 
+
 #pragma mark -
 
 - (void)loadView
@@ -64,7 +65,7 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
     self.navigationController.toolbarHidden = true;
     
     self.cropView.image = self.image;
-    
+        
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -91,6 +92,11 @@ static inline NSString *PELocalizedString(NSString *key, NSString *comment)
 }
 
 #pragma mark -
+
+//- (void)setSquare:(BOOL)square
+//{
+//    _square = square;
+//}
 
 - (void)setImage:(UIImage *)image
 {
