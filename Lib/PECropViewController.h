@@ -34,7 +34,6 @@
 
 - (void)resetCropRect;
 - (void)resetCropRectAnimated:(BOOL)animated;
-
 @end
 
 @protocol PECropViewControllerDelegate <NSObject>
